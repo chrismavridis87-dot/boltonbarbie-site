@@ -21,13 +21,13 @@ const COOKED_URL =
 
 
 const schedule = [
-  { day: "MON", date: "LIVE", title: "Monday Madness", time: "7:30 PM" },
-  { day: "TUE", date: "LIVE", title: "Community Night", time: "7:30 PM" },
-  { day: "WED", date: "OFF", title: "Day Off", time: "OFFLINE" },
-  { day: "THU", date: "LIVE", title: "Freestyle", time: "7:30 PM" },
-  { day: "FRI", date: "LIVE", title: "Friend Friday", time: "7:30 PM" },
-  { day: "SAT", date: "LIVE", title: "Celebrities", time: "8:00 PM" },
-  { day: "SUN", date: "LIVE", title: "Freestyle", time: "7:30 PM" }
+  { day: "MON", date: "LIVE", title: "Monday Madness"},
+  { day: "TUE", date: "LIVE", title: "Community Night"},
+  { day: "WED", date: "OFF", title: "Day Off", time: "DAY OFF" },
+  { day: "THU", date: "LIVE", title: "Freestyle"},
+  { day: "FRI", date: "LIVE", title: "Friend Friday"},
+  { day: "SAT", date: "LIVE", title: "Celebrities"},
+  { day: "SUN", date: "LIVE", title: "Freestyle"}
 ];
 
 function ExternalLink({ href, className = "", children, style }) {
@@ -196,7 +196,7 @@ function App() {
             <p>
               {IS_LIVE
                 ? liveStatus.title ||
-                  "Watch the stream, join the chat and follow every IRL adventure as it happens."
+                  "Watch the stream, join the chat and follow every Spin and IRL adventure as it happens."
                 : "Barbie is offline right now. Follow on Kick and turn on notifications so you never miss the next IRL stream."}
             </p>
 
@@ -251,7 +251,7 @@ function App() {
               <span className="mini-label">LOUD • PINK • UNPREDICTABLE</span>
               <h2>NOT YOUR<br />AVERAGE STREAM</h2>
               <p>
-                Bolt On Barbie is all about IRL adventures, community laughs
+                Bolt On Barbie is all about Spinning Slots, IRL adventures, community laughs
                 and unforgettable live moments. Expect bright energy and a
                 stream that always feels like a party.
               </p>
@@ -413,8 +413,8 @@ function App() {
           <span className="logo-small">BOLT ON</span>
           <span className="logo-big">BARBIE</span>
         </a>
-        <p>IRL streams, clips and community entertainment.</p>
-        <span>© 2026 BOLT ON BARBIE</span>
+        <p>Yes Baby their real!.</p>
+        <span>© 2026 BOLTONBARBIE</span>
       </footer>
     </div>
   );
