@@ -25,7 +25,7 @@ const schedule = [
   { day: "TUE", date: "LIVE", title: "Community Night"},
   { day: "WED", date: "OFF", title: "Day Off", time: "DAY OFF" },
   { day: "THU", date: "LIVE", title: "Freestyle"},
-  { day: "FRI", date: "LIVE", title: "Friend Friday"},
+  { day: "FRI", date: "LIVE", title: "Fuck Your Friend Friday"},
   { day: "SAT", date: "LIVE", title: "Celebrities"},
   { day: "SUN", date: "LIVE", title: "Freestyle"}
 ];
