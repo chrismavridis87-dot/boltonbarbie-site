@@ -2274,3 +2274,280 @@ footer {
 .cooked-note strong {
   color: #ff1493 !important;
 }
+/* =========================================
+   BLACK + NEON PINK THEME
+   ========================================= */
+
+:root {
+  --background: #070507;
+  --surface: #151015;
+  --surface-light: #211821;
+  --pink: #ff1493;
+  --bright-pink: #ff4fba;
+  --text: #ffffff;
+  --muted-text: #c9b8c3;
+  --black: #070507;
+}
+
+/* MAIN PAGE */
+html,
+body,
+#root,
+.site {
+  background: #070507 !important;
+  color: #ffffff !important;
+}
+
+body {
+  background:
+    radial-gradient(circle at 15% 10%, rgba(255, 20, 147, 0.13), transparent 25%),
+    radial-gradient(circle at 85% 30%, rgba(255, 79, 186, 0.09), transparent 25%),
+    #070507 !important;
+}
+
+/* NAVIGATION */
+.navbar {
+  background: rgba(14, 9, 14, 0.96) !important;
+  border-color: #ff1493 !important;
+  box-shadow:
+    7px 8px 0 #ff1493,
+    0 0 25px rgba(255, 20, 147, 0.3) !important;
+}
+
+.navbar nav a {
+  color: #ffffff !important;
+}
+
+.navbar nav a:hover {
+  color: #ff4fba !important;
+}
+
+.logo-small {
+  color: #ffffff !important;
+}
+
+.logo-big {
+  color: #ff1493 !important;
+  -webkit-text-stroke: 1px #ffffff !important;
+  text-shadow: 0 0 18px rgba(255, 20, 147, 0.65) !important;
+}
+
+/* HERO */
+.hero {
+  background:
+    radial-gradient(circle at 75% 45%, rgba(255, 20, 147, 0.22), transparent 34%),
+    linear-gradient(135deg, #070507 0%, #160b13 100%) !important;
+}
+
+.hero h1 {
+  color: #ffffff !important;
+}
+
+.hero h1 span {
+  color: #ff1493 !important;
+  -webkit-text-stroke: 2px #ffffff !important;
+  text-shadow:
+    7px 8px 0 #070507,
+    0 0 28px rgba(255, 20, 147, 0.65) !important;
+}
+
+.hero-kicker,
+.mini-label,
+.section-title > span {
+  color: #ff4fba !important;
+}
+
+.hero-copy p,
+.hero-note {
+  color: #c9b8c3 !important;
+}
+
+/* BUTTONS */
+.button-main {
+  background: linear-gradient(135deg, #ff1493, #ff4fba) !important;
+  color: #ffffff !important;
+  border-color: #ffffff !important;
+  box-shadow:
+    5px 6px 0 #ff1493,
+    0 0 22px rgba(255, 20, 147, 0.45) !important;
+}
+
+.button-light {
+  background: #151015 !important;
+  color: #ffffff !important;
+  border-color: #ff1493 !important;
+}
+
+.button-main:hover,
+.button-light:hover {
+  transform: translate(-2px, -2px);
+  box-shadow:
+    8px 9px 0 #ff1493,
+    0 0 30px rgba(255, 20, 147, 0.55) !important;
+}
+
+/* LIVE RIBBON */
+.live-ribbon {
+  background: #ff1493 !important;
+  border-color: #ffffff !important;
+}
+
+.ribbon-track {
+  color: #070507 !important;
+}
+
+/* STREAM SECTION */
+.stream-section {
+  background:
+    radial-gradient(circle at 80% 50%, rgba(255, 20, 147, 0.15), transparent 30%),
+    #070507 !important;
+}
+
+.stream-copy h2 {
+  color: #ff1493 !important;
+  text-shadow: 0 0 22px rgba(255, 20, 147, 0.45) !important;
+}
+
+.stream-copy p {
+  color: #c9b8c3 !important;
+}
+
+.stream-frame {
+  background: #151015 !important;
+  border-color: #ff1493 !important;
+  box-shadow:
+    12px 14px 0 #ff1493,
+    0 0 28px rgba(255, 20, 147, 0.3) !important;
+}
+
+.offline-frame {
+  background: #151015 !important;
+}
+
+/* ABOUT */
+.about-section {
+  background: #070507 !important;
+}
+
+.about-card {
+  background:
+    linear-gradient(135deg, #151015, #2a0b1e) !important;
+  border-color: #ff1493 !important;
+  box-shadow:
+    14px 16px 0 #ff1493,
+    0 0 32px rgba(255, 20, 147, 0.3) !important;
+}
+
+.about-copy h2 {
+  color: #ff1493 !important;
+  -webkit-text-stroke: 1px #ffffff !important;
+  text-shadow: 6px 7px 0 #070507 !important;
+}
+
+.about-copy p {
+  color: #ffffff !important;
+}
+
+.social-row a {
+  background: #070507 !important;
+  color: #ffffff !important;
+  border-color: #ff1493 !important;
+}
+
+/* COOKED SECTION */
+.cooked-section {
+  background:
+    radial-gradient(circle at 20% 20%, rgba(255, 20, 147, 0.2), transparent 28%),
+    linear-gradient(135deg, #070507, #210b19) !important;
+}
+
+.cooked-card {
+  background: #151015 !important;
+  border-color: #ff1493 !important;
+  box-shadow:
+    14px 16px 0 #ff1493,
+    0 0 35px rgba(255, 20, 147, 0.3) !important;
+}
+
+.cooked-copy h2 {
+  color: #ffffff !important;
+  text-shadow:
+    7px 8px 0 #070507,
+    0 0 24px rgba(255, 20, 147, 0.55) !important;
+}
+
+.cooked-copy p {
+  color: #c9b8c3 !important;
+}
+
+.cooked-visual {
+  background:
+    radial-gradient(circle, rgba(255, 20, 147, 0.22), transparent 42%),
+    #070507 !important;
+  border-color: #ff1493 !important;
+}
+
+/* SOCIAL SECTION */
+.social-section {
+  background:
+    radial-gradient(circle at 15% 15%, rgba(255, 20, 147, 0.2), transparent 24%),
+    #070507 !important;
+}
+
+.social-section .section-title h2 {
+  color: #ff1493 !important;
+  -webkit-text-stroke: 1px #ffffff !important;
+}
+
+.social-card {
+  background: #151015 !important;
+  border-color: #ff1493 !important;
+  box-shadow: 8px 9px 0 #ff1493 !important;
+}
+
+.social-card strong {
+  color: #ffffff !important;
+}
+
+.social-card em {
+  color: #c9b8c3 !important;
+}
+
+/* SCHEDULE */
+.schedule-section {
+  background:
+    radial-gradient(circle at 50% 15%, rgba(255, 20, 147, 0.15), transparent 30%),
+    #070507 !important;
+}
+
+.schedule-section .section-title h2 {
+  color: #ff1493 !important;
+}
+
+.ticket {
+  background: #151015 !important;
+  color: #ffffff !important;
+  border-color: #ff1493 !important;
+  box-shadow: 9px 10px 0 #ff1493 !important;
+}
+
+.ticket-date {
+  background: #ff1493 !important;
+  border-color: #ffffff !important;
+}
+
+.ticket-info h3 {
+  color: #ffffff !important;
+}
+
+.ticket-edge {
+  background: #ff1493 !important;
+  color: #ffffff !important;
+}
+
+/* FOOTER */
+footer {
+  background: #070507 !important;
+  color: #c9b8c3 !important;
+  border-top: 3px solid #ff1493 !important;
+}
