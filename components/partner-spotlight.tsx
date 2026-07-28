@@ -76,7 +76,7 @@ export function PartnerSpotlight() {
               </p>
 
               <a
-                href="https://kick.com/boltonbarbie"
+                href="https://cooked.com/?auth=register-moneygun100&referral_source=MONEYGUN"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="spotlight-link"
