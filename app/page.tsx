@@ -1,4 +1,4 @@
-import { About } from "@/components/about";
+﻿import { About } from "@/components/about";
 import { BackgroundFx } from "@/components/background-fx";
 import { Community } from "@/components/community";
 import { Faq } from "@/components/faq";
@@ -8,6 +8,7 @@ import { NeonExperience, NeonTicker } from "@/components/neon-experience";
 import { PartnerSpotlight } from "@/components/partner-spotlight";
 import { Rewards } from "@/components/rewards";
 import { Schedule } from "@/components/schedule";
+import { Store } from "@/components/store";
 import { SiteHeader } from "@/components/site-header";
 import { Socials } from "@/components/socials";
 
@@ -45,6 +46,7 @@ export default function HomePage() {
         <PartnerSpotlight />
         <Rewards />
         <Schedule />
+        <Store />
         <Socials />
         <Faq />
       </main>
@@ -58,3 +60,4 @@ export default function HomePage() {
     </>
   );
 }
+

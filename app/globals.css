@@ -1,4 +1,4 @@
-@import "tailwindcss";
+﻿@import "tailwindcss";
 
 @theme {
   --color-neon-pink: #FF2DAA;
@@ -1688,7 +1688,7 @@ body::before {
 
 
 /* =========================================================
-   COMMUNITY SPOTLIGHT — TEXT LED PREMIUM SECTION
+   COMMUNITY SPOTLIGHT â€” TEXT LED PREMIUM SECTION
    ========================================================= */
 
 .spotlight-section {
@@ -2326,3 +2326,699 @@ main > section {
     animation: none !important;
   }
 }
+
+
+/* BOLT VAULT BOTRIX STORE START */
+
+.store-section {
+  position: relative;
+  overflow: hidden;
+}
+
+.store-section::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 18%;
+  z-index: -1;
+  width: min(70vw, 900px);
+  height: 420px;
+  border-radius: 50%;
+  background:
+    radial-gradient(
+      circle,
+      rgba(255, 45, 170, 0.13),
+      rgba(139, 92, 246, 0.07) 44%,
+      transparent 70%
+    );
+  filter: blur(80px);
+  transform: translateX(-50%);
+  animation: storeAmbientFloat 7s ease-in-out infinite alternate;
+}
+
+.store-heading {
+  display: grid;
+  gap: 2rem;
+}
+
+.store-section-title {
+  max-width: 12ch;
+}
+
+.store-title-gradient {
+  display: block;
+  background:
+    linear-gradient(
+      100deg,
+      #ff2daa,
+      #ff8bd6 28%,
+      #8b5cf6 60%,
+      #00d9ff 90%
+    );
+  background-size: 230% 100%;
+  background-clip: text;
+  color: transparent;
+  filter: drop-shadow(0 0 26px rgba(255, 45, 170, 0.22));
+  animation: storeTitleFlow 5s linear infinite;
+}
+
+.store-heading-copy {
+  max-width: 35rem;
+  align-self: end;
+}
+
+.store-heading-copy p {
+  color: rgba(255, 255, 255, 0.58);
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+.store-open-button {
+  position: relative;
+  margin-top: 1.65rem;
+  display: inline-flex;
+  min-height: 3.35rem;
+  align-items: center;
+  justify-content: center;
+  gap: 0.72rem;
+  overflow: hidden;
+  border: 1px solid rgba(255, 45, 170, 0.56);
+  border-radius: 1rem;
+  background:
+    linear-gradient(
+      135deg,
+      rgba(255, 45, 170, 0.2),
+      rgba(139, 92, 246, 0.13) 55%,
+      rgba(0, 217, 255, 0.08)
+    );
+  padding: 0.82rem 1.15rem;
+  color: white;
+  font-size: 0.72rem;
+  font-weight: 950;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  box-shadow:
+    0 0 20px rgba(255, 45, 170, 0.15),
+    inset 0 0 20px rgba(255, 45, 170, 0.045);
+  transition:
+    transform 0.25s cubic-bezier(0.22, 1, 0.36, 1),
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.store-open-button::before {
+  content: "";
+  position: absolute;
+  inset: -70% -35%;
+  background:
+    linear-gradient(
+      110deg,
+      transparent 38%,
+      rgba(255, 255, 255, 0.18) 50%,
+      transparent 62%
+    );
+  transform: translateX(-70%) rotate(8deg);
+  transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.store-open-button:hover {
+  transform: translateY(-4px);
+  border-color: rgba(0, 217, 255, 0.8);
+  box-shadow:
+    0 0 25px rgba(255, 45, 170, 0.34),
+    0 0 55px rgba(0, 217, 255, 0.12),
+    inset 0 0 22px rgba(139, 92, 246, 0.08);
+}
+
+.store-open-button:hover::before {
+  transform: translateX(72%) rotate(8deg);
+}
+
+.store-frame-shell {
+  position: relative;
+  isolation: isolate;
+  margin-top: clamp(2.6rem, 6vw, 4.8rem);
+  overflow: hidden;
+  border: 1px solid rgba(255, 45, 170, 0.36);
+  border-radius: 2rem;
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255, 45, 170, 0.055),
+      rgba(0, 217, 255, 0.024) 48%,
+      rgba(255, 255, 255, 0.018)
+    ),
+    rgba(5, 5, 5, 0.86);
+  box-shadow:
+    0 38px 120px rgba(0, 0, 0, 0.58),
+    0 0 38px rgba(255, 45, 170, 0.14),
+    0 0 85px rgba(0, 217, 255, 0.045),
+    inset 0 1px 0 rgba(255, 255, 255, 0.07);
+  backdrop-filter: blur(24px);
+  animation: storeFrameGlow 4.5s ease-in-out infinite;
+}
+
+.store-frame-shell::before {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  z-index: 8;
+  padding: 1px;
+  pointer-events: none;
+  border-radius: inherit;
+  background:
+    conic-gradient(
+      from 0deg,
+      transparent,
+      #ff2daa,
+      transparent 22%,
+      #00d9ff,
+      transparent 48%,
+      #8b5cf6,
+      transparent 72%,
+      #ff2daa,
+      transparent
+    );
+  opacity: 0.52;
+  animation: storeBorderOrbit 10s linear infinite;
+  mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  mask-composite: exclude;
+}
+
+.store-frame-cursor-glow {
+  position: absolute;
+  left: var(--mouse-x, 50%);
+  top: var(--mouse-y, 50%);
+  z-index: 0;
+  width: 420px;
+  height: 420px;
+  pointer-events: none;
+  border-radius: 50%;
+  background:
+    radial-gradient(
+      circle,
+      rgba(255, 45, 170, 0.16),
+      rgba(0, 217, 255, 0.05) 38%,
+      transparent 70%
+    );
+  filter: blur(24px);
+  transform: translate(-50%, -50%);
+  opacity: 0.55;
+}
+
+.store-frame-scanlines {
+  position: absolute;
+  inset: 0;
+  z-index: 6;
+  pointer-events: none;
+  opacity: 0.2;
+  background:
+    repeating-linear-gradient(
+      to bottom,
+      transparent 0,
+      transparent 3px,
+      rgba(255, 255, 255, 0.025) 4px
+    );
+  mix-blend-mode: overlay;
+}
+
+.store-frame-light-sweep {
+  position: absolute;
+  inset: -40%;
+  z-index: 7;
+  pointer-events: none;
+  background:
+    linear-gradient(
+      106deg,
+      transparent 39%,
+      rgba(255, 255, 255, 0.035) 45%,
+      rgba(255, 45, 170, 0.19) 50%,
+      rgba(0, 217, 255, 0.08) 54%,
+      transparent 62%
+    );
+  transform: translateX(-78%) rotate(7deg);
+  animation: storeLightSweep 6.4s ease-in-out infinite;
+  mix-blend-mode: screen;
+}
+
+.store-frame-header {
+  position: relative;
+  z-index: 9;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  background:
+    linear-gradient(
+      90deg,
+      rgba(255, 45, 170, 0.09),
+      rgba(6, 5, 8, 0.92) 45%,
+      rgba(0, 217, 255, 0.05)
+    );
+  padding: 1rem 1.15rem;
+  backdrop-filter: blur(18px);
+}
+
+.store-frame-brand {
+  display: flex;
+  min-width: 0;
+  align-items: center;
+  gap: 0.85rem;
+}
+
+.store-frame-logo {
+  display: grid;
+  width: 2.75rem;
+  height: 2.75rem;
+  flex-shrink: 0;
+  place-items: center;
+  border: 1px solid rgba(255, 45, 170, 0.42);
+  border-radius: 0.9rem;
+  background: rgba(255, 45, 170, 0.1);
+  color: #ff2daa;
+  box-shadow:
+    0 0 18px rgba(255, 45, 170, 0.18),
+    inset 0 0 15px rgba(255, 45, 170, 0.06);
+  animation: storeLogoPulse 2.9s ease-in-out infinite;
+}
+
+.store-frame-brand p {
+  color: white;
+  font-size: 0.82rem;
+  font-weight: 950;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+}
+
+.store-frame-brand span {
+  display: block;
+  margin-top: 0.2rem;
+  overflow: hidden;
+  color: rgba(255, 255, 255, 0.38);
+  font-size: 0.69rem;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.store-frame-status {
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: center;
+  gap: 0.55rem;
+  border: 1px solid rgba(0, 217, 255, 0.2);
+  border-radius: 999px;
+  background: rgba(0, 217, 255, 0.055);
+  padding: 0.55rem 0.72rem;
+  color: rgba(255, 255, 255, 0.68);
+  font-size: 0.62rem;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.store-status-dot {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background: #00d9ff;
+  box-shadow:
+    0 0 8px #00d9ff,
+    0 0 18px rgba(0, 217, 255, 0.68);
+  animation: storeStatusPulse 1.6s ease-in-out infinite;
+}
+
+.store-browser-bar {
+  position: relative;
+  z-index: 9;
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 0.8rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.065);
+  background: rgba(10, 8, 11, 0.84);
+  padding: 0.72rem 0.9rem;
+}
+
+.store-browser-dots {
+  display: flex;
+  align-items: center;
+  gap: 0.36rem;
+}
+
+.store-browser-dots span {
+  width: 0.46rem;
+  height: 0.46rem;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.17);
+}
+
+.store-browser-dots span:first-child {
+  background: #ff2daa;
+  box-shadow: 0 0 8px rgba(255, 45, 170, 0.6);
+}
+
+.store-browser-dots span:nth-child(2) {
+  background: #8b5cf6;
+}
+
+.store-browser-dots span:nth-child(3) {
+  background: #00d9ff;
+  box-shadow: 0 0 8px rgba(0, 217, 255, 0.5);
+}
+
+.store-browser-address {
+  display: flex;
+  min-width: 0;
+  align-items: center;
+  gap: 0.5rem;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 0.7rem;
+  background: rgba(255, 255, 255, 0.025);
+  padding: 0.56rem 0.72rem;
+  color: rgba(255, 255, 255, 0.36);
+  font-size: 0.7rem;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.store-browser-address svg {
+  flex-shrink: 0;
+  color: #ff2daa;
+  filter: drop-shadow(0 0 6px rgba(255, 45, 170, 0.5));
+}
+
+.store-browser-open {
+  display: grid;
+  width: 2.35rem;
+  height: 2.35rem;
+  place-items: center;
+  border: 1px solid rgba(255, 45, 170, 0.22);
+  border-radius: 0.7rem;
+  background: rgba(255, 45, 170, 0.055);
+  color: rgba(255, 255, 255, 0.58);
+  transition:
+    color 0.2s ease,
+    border-color 0.2s ease,
+    background 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.store-browser-open:hover {
+  border-color: rgba(0, 217, 255, 0.65);
+  background: rgba(0, 217, 255, 0.08);
+  color: white;
+  box-shadow: 0 0 20px rgba(0, 217, 255, 0.12);
+}
+
+.store-frame-container {
+  position: relative;
+  z-index: 2;
+  min-height: 760px;
+  overflow: hidden;
+  background:
+    radial-gradient(
+      circle at 50% 10%,
+      rgba(255, 45, 170, 0.09),
+      transparent 34%
+    ),
+    #070707;
+}
+
+.store-loading {
+  position: absolute;
+  inset: 0;
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background:
+    radial-gradient(
+      circle at 50% 44%,
+      rgba(255, 45, 170, 0.16),
+      rgba(139, 92, 246, 0.06) 30%,
+      transparent 56%
+    ),
+    #070707;
+  text-align: center;
+}
+
+.store-loading-spinner {
+  color: #ff2daa;
+  filter:
+    drop-shadow(0 0 8px #ff2daa)
+    drop-shadow(0 0 20px rgba(255, 45, 170, 0.52));
+  animation: storeSpinner 1s linear infinite;
+}
+
+.store-loading strong {
+  margin-top: 1rem;
+  color: white;
+  font-size: 0.9rem;
+  font-weight: 950;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.store-loading span {
+  margin-top: 0.45rem;
+  color: rgba(255, 255, 255, 0.38);
+  font-size: 0.76rem;
+}
+
+.store-frame {
+  position: relative;
+  z-index: 2;
+  display: block;
+  width: 100%;
+  height: 820px;
+  border: 0;
+  background: #070707;
+  opacity: 0;
+  filter:
+    saturate(0.92)
+    contrast(1.04)
+    brightness(0.95);
+  transition:
+    opacity 0.55s ease,
+    filter 0.35s ease;
+}
+
+.store-frame.is-loaded {
+  opacity: 1;
+}
+
+.store-frame:hover {
+  filter:
+    saturate(1.02)
+    contrast(1.04)
+    brightness(1);
+}
+
+.store-frame-edge-glow {
+  position: absolute;
+  inset: 0;
+  z-index: 4;
+  pointer-events: none;
+  box-shadow:
+    inset 0 0 44px rgba(255, 45, 170, 0.08),
+    inset 0 0 90px rgba(0, 217, 255, 0.035);
+}
+
+.store-frame-footer {
+  position: relative;
+  z-index: 9;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.075);
+  background:
+    linear-gradient(
+      90deg,
+      rgba(255, 45, 170, 0.055),
+      rgba(8, 6, 8, 0.92),
+      rgba(0, 217, 255, 0.035)
+    );
+  padding: 0.92rem 1rem;
+  color: rgba(255, 255, 255, 0.32);
+  font-size: 0.72rem;
+}
+
+.store-frame-footer a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: #00d9ff;
+  font-weight: 800;
+  transition:
+    color 0.2s ease,
+    text-shadow 0.2s ease;
+}
+
+.store-frame-footer a:hover {
+  color: white;
+  text-shadow: 0 0 12px rgba(0, 217, 255, 0.58);
+}
+
+@keyframes storeAmbientFloat {
+  to {
+    transform: translateX(-50%) translateY(35px) scale(1.08);
+    opacity: 0.75;
+  }
+}
+
+@keyframes storeTitleFlow {
+  to {
+    background-position: 230% 0;
+  }
+}
+
+@keyframes storeFrameGlow {
+  50% {
+    border-color: rgba(0, 217, 255, 0.4);
+    box-shadow:
+      0 42px 130px rgba(0, 0, 0, 0.6),
+      0 0 48px rgba(255, 45, 170, 0.2),
+      0 0 95px rgba(0, 217, 255, 0.07),
+      inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  }
+}
+
+@keyframes storeBorderOrbit {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes storeLightSweep {
+  0%,
+  60% {
+    transform: translateX(-78%) rotate(7deg);
+    opacity: 0;
+  }
+
+  70% {
+    opacity: 1;
+  }
+
+  92%,
+  100% {
+    transform: translateX(78%) rotate(7deg);
+    opacity: 0;
+  }
+}
+
+@keyframes storeLogoPulse {
+  50% {
+    transform: scale(1.06);
+    border-color: rgba(0, 217, 255, 0.48);
+    color: #00d9ff;
+    box-shadow:
+      0 0 22px rgba(255, 45, 170, 0.28),
+      0 0 44px rgba(0, 217, 255, 0.1),
+      inset 0 0 18px rgba(139, 92, 246, 0.08);
+  }
+}
+
+@keyframes storeStatusPulse {
+  50% {
+    transform: scale(1.35);
+    background: #ff2daa;
+    box-shadow:
+      0 0 10px #ff2daa,
+      0 0 22px rgba(255, 45, 170, 0.68);
+  }
+}
+
+@keyframes storeSpinner {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (min-width: 900px) {
+  .store-heading {
+    grid-template-columns: 1.08fr 0.92fr;
+    align-items: end;
+  }
+}
+
+@media (max-width: 760px) {
+  .store-frame-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .store-frame-status {
+    align-self: flex-start;
+  }
+
+  .store-frame-container {
+    min-height: 660px;
+  }
+
+  .store-frame {
+    height: 700px;
+  }
+
+  .store-frame-footer {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .store-open-button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 520px) {
+  .store-frame-shell {
+    border-radius: 1.35rem;
+  }
+
+  .store-frame-header {
+    padding: 0.9rem;
+  }
+
+  .store-browser-bar {
+    grid-template-columns: minmax(0, 1fr) auto;
+  }
+
+  .store-browser-dots {
+    display: none;
+  }
+
+  .store-frame-brand span {
+    max-width: 64vw;
+  }
+
+  .store-frame-container {
+    min-height: 590px;
+  }
+
+  .store-frame {
+    height: 630px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .store-section::after,
+  .store-title-gradient,
+  .store-frame-shell,
+  .store-frame-shell::before,
+  .store-frame-light-sweep,
+  .store-frame-logo,
+  .store-status-dot,
+  .store-loading-spinner {
+    animation: none !important;
+  }
+}
+
+/* BOLT VAULT BOTRIX STORE END */
+
+
