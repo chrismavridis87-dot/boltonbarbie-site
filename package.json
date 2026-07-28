@@ -1,22 +1,31 @@
 {
-  "name": "boltonbarbie-site",
+  "name": "bolt-on-barbie-luxury",
+  "version": "1.0.0",
   "private": true,
-  "version": "2.0.0",
-  "type": "module",
   "scripts": {
-    "dev": "node server.js",
-    "build": "vite build",
-    "start": "node server.js"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint ."
   },
   "dependencies": {
-    "dotenv": "^16.4.7",
-    "express": "^4.21.2",
-    "react": "^19.1.1",
-    "react-dom": "^19.1.1",
-    "vite": "^8.1.5"
+    "lucide-react": "1.27.0",
+    "motion": "12.42.2",
+    "next": "16.2.12",
+    "react": "19.2.8",
+    "react-dom": "19.2.8"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.1.0",
+    "@types/node": "^22.10.0",
+    "@types/react": "^19.2.0",
+    "@types/react-dom": "^19.2.0",
+    "eslint": "^9.0.0",
+    "eslint-config-next": "16.2.12",
+    "tailwindcss": "^4.1.0",
+    "typescript": "5.9.3"
+  },
   "engines": {
-    "node": ">=22.12.0 <23"
+    "node": ">=22.12.0"
   }
 }
