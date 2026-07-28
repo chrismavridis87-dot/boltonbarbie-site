@@ -2025,3 +2025,304 @@ body::before {
     animation: none !important;
   }
 }
+
+
+/* =========================================================
+   IMMERSIVE SCHEDULE + SCROLL MOTION UPDATE
+   ========================================================= */
+
+:root {
+  --parallax-slow: 0px;
+  --parallax-medium: 0px;
+  --parallax-fast: 0px;
+  --scroll-glow-shift: 0px;
+  --scroll-glow-shift-negative: 0px;
+}
+
+html {
+  scroll-padding-top: 7rem;
+}
+
+main > section {
+  scroll-margin-top: 7rem;
+}
+
+.page-entry-transition {
+  position: fixed;
+  inset: 0;
+  z-index: 999;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  pointer-events: none;
+  animation: pageTransitionHide 1.65s 1.25s both;
+}
+
+.page-entry-transition span {
+  background:
+    linear-gradient(
+      150deg,
+      #050505,
+      #180511 48%,
+      #050505
+    );
+  border-right: 1px solid rgba(255,45,170,.24);
+  box-shadow: inset 0 0 70px rgba(255,45,170,.06);
+  animation: pagePanelLift 1.05s .62s cubic-bezier(.76, 0, .24, 1) both;
+}
+
+.page-entry-transition span:nth-child(2) {
+  animation-delay: .7s;
+  background:
+    linear-gradient(
+      150deg,
+      #050505,
+      #070d14 48%,
+      #050505
+    );
+}
+
+.page-entry-transition span:nth-child(3) {
+  animation-delay: .78s;
+  border-right: 0;
+}
+
+.page-entry-transition strong {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  color: white;
+  font-size: clamp(1rem, 3vw, 2rem);
+  font-weight: 950;
+  letter-spacing: .28em;
+  text-align: center;
+  text-shadow:
+    0 0 12px #FF2DAA,
+    0 0 32px rgba(255,45,170,.7),
+    0 0 58px rgba(0,217,255,.35);
+  transform: translate(-50%, -50%);
+  white-space: nowrap;
+  animation: pageBrandExit .8s .48s ease both;
+}
+
+.parallax-background-layer {
+  position: absolute;
+  inset: 0;
+  will-change: transform;
+}
+
+.parallax-background-slow {
+  transform: translate3d(0, var(--parallax-slow), 0);
+}
+
+.parallax-background-medium {
+  transform: translate3d(
+    var(--scroll-glow-shift),
+    var(--parallax-medium),
+    0
+  );
+}
+
+.parallax-background-fast {
+  transform: translate3d(
+    var(--scroll-glow-shift-negative),
+    var(--parallax-fast),
+    0
+  );
+}
+
+.parallax-grid-layer {
+  position: absolute;
+  inset: 0;
+  transform: translate3d(0, var(--parallax-medium), 0);
+  will-change: transform;
+}
+
+.animated-section-parallax {
+  will-change: transform;
+}
+
+.schedule-section-immersive {
+  perspective: 1400px;
+}
+
+.schedule-card-reactive {
+  --card-x: 50%;
+  --card-y: 45%;
+  transform-style: preserve-3d;
+  isolation: isolate;
+}
+
+.schedule-card-cursor-light {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  border-radius: inherit;
+  opacity: .2;
+  background:
+    radial-gradient(
+      circle at var(--card-x) var(--card-y),
+      rgba(255,255,255,.18),
+      rgba(var(--accent), .13) 15%,
+      rgba(var(--accent), .045) 34%,
+      transparent 58%
+    );
+  mix-blend-mode: screen;
+  transition: opacity .24s ease;
+}
+
+.schedule-card-reactive:hover .schedule-card-cursor-light {
+  opacity: .9;
+}
+
+.schedule-card-scan {
+  position: absolute;
+  inset: -45%;
+  z-index: 1;
+  pointer-events: none;
+  background:
+    linear-gradient(
+      104deg,
+      transparent 40%,
+      rgba(255,255,255,.025) 46%,
+      rgba(var(--accent), .2) 50%,
+      rgba(0,217,255,.08) 54%,
+      transparent 61%
+    );
+  opacity: 0;
+  transform: translateX(-58%) rotate(7deg);
+}
+
+.schedule-card-reactive:hover .schedule-card-scan {
+  animation: scheduleInteractiveScan 1.15s ease-out;
+}
+
+.schedule-giveaway-badge {
+  width: fit-content;
+  margin-top: 1rem;
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  border: 1px solid rgba(0,217,255,.54);
+  border-radius: 999px;
+  background:
+    linear-gradient(
+      100deg,
+      rgba(0,217,255,.12),
+      rgba(139,92,246,.12)
+    );
+  padding: .48rem .72rem;
+  color: #9aeeff;
+  font-size: .65rem;
+  font-weight: 950;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  box-shadow:
+    0 0 13px rgba(0,217,255,.18),
+    inset 0 0 14px rgba(139,92,246,.08);
+  text-shadow: 0 0 10px rgba(0,217,255,.52);
+  animation: giveawayBadgePulse 2.4s ease-in-out infinite;
+}
+
+.schedule-card-reactive:hover .schedule-giveaway-badge {
+  color: white;
+  border-color: rgba(255,255,255,.8);
+  box-shadow:
+    0 0 18px rgba(0,217,255,.5),
+    0 0 38px rgba(139,92,246,.25);
+}
+
+.neon-button,
+.social-card,
+.schedule-card-premium,
+.reward-card,
+.spotlight-row,
+.faq-item {
+  transition-timing-function: cubic-bezier(.22, 1, .36, 1);
+}
+
+.neon-button:active,
+.social-card:active {
+  transform: translateY(-1px) scale(.985);
+}
+
+
+@keyframes pagePanelLift {
+  from { transform: translateY(0); }
+  to { transform: translateY(-104%); }
+}
+
+@keyframes pageBrandExit {
+  0% { opacity: 0; transform: translate(-50%, -42%) scale(.96); }
+  34% { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+  100% { opacity: 0; transform: translate(-50%, -62%) scale(1.04); }
+}
+
+@keyframes pageTransitionHide {
+  to { visibility: hidden; }
+}
+
+@keyframes scheduleInteractiveScan {
+  0% {
+    opacity: 0;
+    transform: translateX(-58%) rotate(7deg);
+  }
+  24% { opacity: 1; }
+  100% {
+    opacity: 0;
+    transform: translateX(58%) rotate(7deg);
+  }
+}
+
+@keyframes giveawayBadgePulse {
+  50% {
+    transform: translateY(-2px);
+    border-color: rgba(255,45,170,.65);
+    color: #ffd3ef;
+    box-shadow:
+      0 0 16px rgba(0,217,255,.28),
+      0 0 30px rgba(255,45,170,.14),
+      inset 0 0 18px rgba(139,92,246,.12);
+    text-shadow:
+      0 0 10px rgba(0,217,255,.55),
+      0 0 18px rgba(255,45,170,.32);
+  }
+}
+
+@media (max-width: 900px) {
+
+  .schedule-card-cursor-light {
+    display: none;
+  }
+}
+
+@media (max-width: 560px) {
+  .page-entry-transition {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .page-entry-transition span:nth-child(3) {
+    display: none;
+  }
+
+  .page-entry-transition strong {
+    max-width: 86vw;
+    white-space: normal;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .page-entry-transition {
+    display: none;
+  }
+
+  .parallax-background-slow,
+  .parallax-background-medium,
+  .parallax-background-fast,
+  .parallax-grid-layer,
+
+  .schedule-card-scan,
+  .schedule-giveaway-badge {
+    animation: none !important;
+  }
+}

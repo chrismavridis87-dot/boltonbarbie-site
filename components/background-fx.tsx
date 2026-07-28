@@ -31,11 +31,22 @@ export function BackgroundFx() {
     <div className="pointer-events-none fixed inset-0 z-0 overflow-hidden">
       <div className="absolute inset-0 bg-[#050505]" />
 
-      <div className="neon-aurora neon-aurora-pink" />
-      <div className="neon-aurora neon-aurora-blue" />
-      <div className="neon-aurora neon-aurora-purple" />
+      <div className="parallax-background-layer parallax-background-slow">
+        <div className="neon-aurora neon-aurora-pink" />
+      </div>
 
-      <div className="cyber-grid absolute inset-x-0 bottom-0 h-[72vh] opacity-45" />
+      <div className="parallax-background-layer parallax-background-medium">
+        <div className="neon-aurora neon-aurora-blue" />
+      </div>
+
+      <div className="parallax-background-layer parallax-background-fast">
+        <div className="neon-aurora neon-aurora-purple" />
+      </div>
+
+      <div className="parallax-grid-layer">
+        <div className="cyber-grid absolute inset-x-0 bottom-0 h-[72vh] opacity-45" />
+      </div>
+
       <div className="scanline absolute inset-0 opacity-35" />
 
       <div className="neon-beam-field" aria-hidden="true">

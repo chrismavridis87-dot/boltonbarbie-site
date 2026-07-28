@@ -81,49 +81,52 @@ export const schedule = [
     day: "Monday",
     shortDay: "MON",
     type: "Mayhem Monday",
-    note: "Chaos, big moments and unpredictable community fun.",
+    note: "Chaos, big moments and unpredictable fun.",
     accent: "pink"
   },
   {
     day: "Tuesday",
     shortDay: "TUE",
-    type: "Bonus Bonanza",
-    note: "Bonus features, openings and high-energy stream moments.",
+    type: "Bonus Bonanza Tuesday",
+    note: "Feature reveals, surprise challenges and high-energy community picks.",
     accent: "blue"
   },
   {
     day: "Wednesday",
     shortDay: "WED",
-    type: "Filo Frenzy",
-    note: "Community giveaway stream.",
+    type: "Filo Frenzy Wednesday",
+    badge: "Community Giveaway",
+    note: "Filo-themed action and rewards for the community.",
     accent: "purple"
   },
   {
     day: "Thursday",
     shortDay: "THU",
-    type: "Tournament Takeover",
-    note: "Community tournament plus giveaways.",
+    type: "Tournament Takeover Thursday",
+    badge: "Community Giveaway",
+    note: "Community competitions and giveaways.",
     accent: "blue"
   },
   {
     day: "Friday",
     shortDay: "FRI",
     type: "Freestyle Friday",
-    note: "Anything goes — IRL, challenges and community picks.",
+    note: "Anything can happen — IRL, challenges and community picks.",
     accent: "pink"
   },
   {
     day: "Saturday",
     shortDay: "SAT",
-    type: "Celebrity Showdown",
-    note: "Community giveaway stream and special guests.",
+    type: "Celebrity Showdown Saturday",
+    badge: "Community Giveaway",
+    note: "Celebrity battles and community rewards.",
     accent: "purple"
   },
   {
     day: "Sunday",
     shortDay: "SUN",
-    type: "Shady Lady Sundays",
-    note: "Relaxed vibes, big moments and community hangs.",
+    type: "Shady Lady Sunday",
+    note: "Good vibes, big moments and a chill finish to the week.",
     accent: "pink"
   }
 ];

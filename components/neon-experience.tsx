@@ -3,7 +3,8 @@
 import { useEffect, useRef, useState } from "react";
 
 export function NeonExperience() {
-  const frameRef = useRef<number | null>(null);
+  const pointerFrameRef = useRef<number | null>(null);
+  const scrollFrameRef = useRef<number | null>(null);
   const pointerRef = useRef({ x: 50, y: 34 });
   const [scrollProgress, setScrollProgress] = useState(0);
 
@@ -16,7 +17,7 @@ export function NeonExperience() {
     function applyPointer() {
       root.style.setProperty("--mouse-x", `${pointerRef.current.x}%`);
       root.style.setProperty("--mouse-y", `${pointerRef.current.y}%`);
-      frameRef.current = null;
+      pointerFrameRef.current = null;
     }
 
     function handlePointerMove(event: PointerEvent) {
@@ -29,38 +30,71 @@ export function NeonExperience() {
         y: (event.clientY / window.innerHeight) * 100
       };
 
-      if (frameRef.current === null) {
-        frameRef.current = window.requestAnimationFrame(applyPointer);
+      if (pointerFrameRef.current === null) {
+        pointerFrameRef.current = window.requestAnimationFrame(applyPointer);
       }
     }
 
-    function handleScroll() {
+    function applyScroll() {
+      const scrollY = window.scrollY;
       const scrollable =
         document.documentElement.scrollHeight - window.innerHeight;
       const nextProgress =
-        scrollable > 0 ? (window.scrollY / scrollable) * 100 : 0;
+        scrollable > 0 ? (scrollY / scrollable) * 100 : 0;
 
       setScrollProgress(Math.min(100, Math.max(0, nextProgress)));
+
+      if (!reducedMotion) {
+        root.style.setProperty("--parallax-slow", `${scrollY * -0.018}px`);
+        root.style.setProperty("--parallax-medium", `${scrollY * -0.038}px`);
+        root.style.setProperty("--parallax-fast", `${scrollY * -0.065}px`);
+        const glowShift = Math.sin(scrollY / 220) * 36;
+        root.style.setProperty("--scroll-glow-shift", `${glowShift}px`);
+        root.style.setProperty(
+          "--scroll-glow-shift-negative",
+          `${glowShift * -1}px`
+        );
+      }
+
+      scrollFrameRef.current = null;
+    }
+
+    function handleScroll() {
+      if (scrollFrameRef.current === null) {
+        scrollFrameRef.current = window.requestAnimationFrame(applyScroll);
+      }
     }
 
     window.addEventListener("pointermove", handlePointerMove, {
       passive: true
     });
     window.addEventListener("scroll", handleScroll, { passive: true });
-    handleScroll();
+
+    applyScroll();
 
     return () => {
       window.removeEventListener("pointermove", handlePointerMove);
       window.removeEventListener("scroll", handleScroll);
 
-      if (frameRef.current !== null) {
-        window.cancelAnimationFrame(frameRef.current);
+      if (pointerFrameRef.current !== null) {
+        window.cancelAnimationFrame(pointerFrameRef.current);
+      }
+
+      if (scrollFrameRef.current !== null) {
+        window.cancelAnimationFrame(scrollFrameRef.current);
       }
     };
   }, []);
 
   return (
     <>
+      <div className="page-entry-transition" aria-hidden="true">
+        <span />
+        <span />
+        <span />
+        <strong>BOLT ON BARBIE</strong>
+      </div>
+
       <div
         className="neon-scroll-progress"
         style={{ transform: `scaleX(${scrollProgress / 100})` }}
