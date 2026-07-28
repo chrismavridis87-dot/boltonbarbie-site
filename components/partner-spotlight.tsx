@@ -5,7 +5,7 @@ import { siteConfig } from "@/lib/site-data";
 const spotlightItems = [
   {
     number: "01",
-    title: "God-tier live experience",
+    title: "God-tier Rewards",
     description:
       "A polished, high-energy stream built around interaction, special moments and community-led chaos.",
     icon: Sparkles
@@ -38,6 +38,13 @@ const spotlightItems = [
       "Ongoing recognition and premium rewards for the viewers who consistently support the stream.",
     icon: Crown
   }
+    {
+    number: "06",
+    title: "Live RTP",
+    description:
+      "Track the hottest games RIGHT NOW.",
+    icon: Crown
+  }
 ];
 
 export function PartnerSpotlight() {
@@ -54,7 +61,7 @@ export function PartnerSpotlight() {
             <div>
               <h2 className="spotlight-title">
                 Built for the
-                <span> Barbie Army.</span>
+                <span> The Bolt Vault.</span>
               </h2>
             </div>
 
