@@ -29,9 +29,9 @@ export const navItems = [
   { label: "Cooked", href: "#spotlight" },
   { label: "Rewards", href: "#rewards" },
   { label: "Schedule", href: "#schedule" },
-  { label: "Socials", href: "#socials" },
-  { label: "FAQ", href: "#faq" }
-  { label: "Store", href: "#store" },
+{ label: "Socials", href: "#socials" },
+{ label: "FAQ", href: "#faq" },
+{ label: "Store", href: "#store" },
 ];
 
 export const communityItems = [
