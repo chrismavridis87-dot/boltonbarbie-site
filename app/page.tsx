@@ -5,6 +5,7 @@ import { Faq } from "@/components/faq";
 import { Footer } from "@/components/footer";
 import { Hero } from "@/components/hero";
 import { NeonExperience, NeonTicker } from "@/components/neon-experience";
+import { PartnerSpotlight } from "@/components/partner-spotlight";
 import { Rewards } from "@/components/rewards";
 import { Schedule } from "@/components/schedule";
 import { SiteHeader } from "@/components/site-header";
@@ -41,6 +42,7 @@ export default function HomePage() {
         <NeonTicker />
         <About />
         <Community />
+        <PartnerSpotlight />
         <Rewards />
         <Schedule />
         <Socials />
