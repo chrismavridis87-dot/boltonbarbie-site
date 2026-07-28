@@ -81,7 +81,7 @@ export function PartnerSpotlight() {
                 rel="noopener noreferrer"
                 className="spotlight-link"
               >
-                Visit Bolt On Barbie
+                Cooked Casino - Code: Moneygun
                 <ArrowUpRight size={18} aria-hidden="true" />
               </a>
             </div>
