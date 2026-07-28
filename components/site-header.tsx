@@ -9,14 +9,14 @@ export function SiteHeader() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="fixed inset-x-0 top-0 z-50 px-3 pt-3 md:px-6 md:pt-5">
-      <div className="mx-auto flex max-w-7xl items-center justify-between rounded-2xl border border-white/10 bg-black/55 px-4 py-3 shadow-[0_18px_60px_rgba(0,0,0,.45)] backdrop-blur-2xl md:px-6">
+    <header className="site-header-shell fixed inset-x-0 top-0 z-50 px-3 pt-3 md:px-6 md:pt-5">
+      <div className="site-header-panel mx-auto flex max-w-7xl items-center justify-between rounded-2xl border border-white/10 bg-black/55 px-4 py-3 shadow-[0_18px_60px_rgba(0,0,0,.45)] backdrop-blur-2xl md:px-6">
         <a
           href="#main-content"
           className="group flex items-center gap-3"
           aria-label="Bolt On Barbie home"
         >
-          <span className="grid size-10 place-items-center rounded-xl border border-neon-pink/40 bg-neon-pink/10 text-neon-pink shadow-[0_0_24px_rgba(255,45,170,.25)]">
+          <span className="brand-neon-badge grid size-10 place-items-center rounded-xl border border-neon-pink/40 bg-neon-pink/10 text-neon-pink shadow-[0_0_24px_rgba(255,45,170,.25)]">
             <span className="font-black">B</span>
           </span>
           <span className="flex flex-col leading-none">
@@ -45,7 +45,7 @@ export function SiteHeader() {
           href={siteConfig.kickUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="hidden items-center gap-2 rounded-xl border border-neon-pink/50 bg-neon-pink/12 px-4 py-2.5 text-xs font-black uppercase tracking-[0.14em] text-white shadow-[0_0_22px_rgba(255,45,170,.18)] transition hover:-translate-y-0.5 hover:bg-neon-pink hover:text-black lg:flex"
+          className="header-live-button hidden items-center gap-2 rounded-xl border border-neon-pink/50 bg-neon-pink/12 px-4 py-2.5 text-xs font-black uppercase tracking-[0.14em] text-white shadow-[0_0_22px_rgba(255,45,170,.18)] transition hover:-translate-y-0.5 hover:bg-neon-pink hover:text-black lg:flex"
         >
           <Radio size={16} aria-hidden="true" />
           Watch live

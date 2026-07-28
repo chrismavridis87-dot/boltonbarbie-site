@@ -4,6 +4,7 @@ import { Community } from "@/components/community";
 import { Faq } from "@/components/faq";
 import { Footer } from "@/components/footer";
 import { Hero } from "@/components/hero";
+import { NeonExperience, NeonTicker } from "@/components/neon-experience";
 import { Rewards } from "@/components/rewards";
 import { Schedule } from "@/components/schedule";
 import { SiteHeader } from "@/components/site-header";
@@ -32,10 +33,12 @@ export default function HomePage() {
       </a>
 
       <BackgroundFx />
+      <NeonExperience />
       <SiteHeader />
 
       <main id="main-content" className="relative z-10 overflow-hidden">
         <Hero />
+        <NeonTicker />
         <About />
         <Community />
         <Rewards />

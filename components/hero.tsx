@@ -10,7 +10,7 @@ export function Hero() {
   const shouldReduceMotion = useReducedMotion();
 
   return (
-    <section className="relative flex min-h-[100svh] items-center px-4 pb-16 pt-28 md:px-6 md:pb-24 md:pt-36">
+    <section className="hero-neon-stage relative flex min-h-[100svh] items-center px-4 pb-16 pt-28 md:px-6 md:pb-24 md:pt-36">
       <div className="mx-auto grid w-full max-w-7xl items-center gap-12 lg:grid-cols-[0.95fr_1.05fr]">
         <motion.div
           initial={shouldReduceMotion ? false : { opacity: 0, x: -28 }}
@@ -23,7 +23,7 @@ export function Hero() {
             Australian IRL streamer
           </div>
 
-          <h1 className="mt-6 text-balance text-5xl font-black uppercase leading-[0.88] tracking-[-0.065em] text-white sm:text-6xl md:text-7xl xl:text-[96px]">
+          <h1 className="hero-neon-title mt-6 text-balance text-5xl font-black uppercase leading-[0.88] tracking-[-0.065em] text-white sm:text-6xl md:text-7xl xl:text-[96px]">
             Chaos.
             <span className="block bg-gradient-to-r from-neon-pink via-[#ff7dcb] to-electric-blue bg-clip-text text-transparent drop-shadow-[0_0_28px_rgba(255,45,170,.28)]">
               IRL.
@@ -65,7 +65,7 @@ export function Hero() {
           <div className="absolute -right-5 top-10 h-48 w-48 rounded-full bg-electric-blue/15 blur-[80px]" />
 
           <motion.div
-            className="relative overflow-hidden rounded-[32px] border border-white/12 bg-white/[0.035] p-4 shadow-[0_40px_120px_rgba(0,0,0,.65),0_0_70px_rgba(255,45,170,.12)] backdrop-blur-xl"
+            className="hero-logo-frame relative overflow-hidden rounded-[32px] border border-white/12 bg-white/[0.035] p-4 shadow-[0_40px_120px_rgba(0,0,0,.65),0_0_70px_rgba(255,45,170,.12)] backdrop-blur-xl"
             animate={
               shouldReduceMotion
                 ? undefined
@@ -82,7 +82,7 @@ export function Hero() {
                 width={1300}
                 height={681}
                 priority
-                className="relative z-10 h-full w-full object-contain p-2 drop-shadow-[0_0_26px_rgba(255,45,170,.55)]"
+                className="hero-neon-logo relative z-10 h-full w-full object-contain p-2 drop-shadow-[0_0_26px_rgba(255,45,170,.55)]"
               />
               <div className="absolute inset-x-7 bottom-7 z-20 flex items-center justify-between rounded-2xl border border-white/10 bg-black/55 px-4 py-3 backdrop-blur-xl">
                 <div>

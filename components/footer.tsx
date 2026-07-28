@@ -3,7 +3,7 @@ import { siteConfig } from "@/lib/site-data";
 
 export function Footer() {
   return (
-    <footer className="relative z-10 border-t border-white/8 bg-black/70 px-4 py-10 backdrop-blur-2xl md:px-6">
+    <footer className="site-footer-neon relative z-10 border-t border-white/8 bg-black/70 px-4 py-10 backdrop-blur-2xl md:px-6">
       <div className="mx-auto flex max-w-7xl flex-col gap-8">
         <div className="flex flex-col items-start justify-between gap-6 md:flex-row md:items-center">
           <div>
