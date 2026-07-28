@@ -20,7 +20,7 @@ export function Hero() {
         >
           <div className="eyebrow">
             <span className="eyebrow-dot" aria-hidden="true" />
-            Australian IRL streamer
+            Australian Casino and IRL streamer
           </div>
 
           <h1 className="hero-neon-title mt-6 text-balance text-5xl font-black uppercase leading-[0.88] tracking-[-0.065em] text-white sm:text-6xl md:text-7xl xl:text-[96px]">
@@ -104,7 +104,7 @@ export function Hero() {
             <p className="text-[9px] font-black uppercase tracking-[0.18em] text-neon-purple">
               Signature energy
             </p>
-            <p className="mt-1 font-bold text-white">Feminine. Fearless. Live.</p>
+            <p className="mt-1 font-bold text-white">Crazy Energy. Big Wins.</p>
           </div>
         </motion.div>
       </div>
