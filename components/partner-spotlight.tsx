@@ -1,6 +1,5 @@
 import { ArrowUpRight, Crown, Gauge, Gift, Sparkles, Trophy } from "lucide-react";
 import { AnimatedSection } from "@/components/ui/animated-section";
-import { siteConfig } from "@/lib/site-data";
 
 const spotlightItems = [
   {
@@ -49,7 +48,10 @@ const spotlightItems = [
 
 export function PartnerSpotlight() {
   return (
-    <section id="spotlight" className="spotlight-section section-shell">
+    <section
+      id="spotlight"
+      className="spotlight-section section-shell"
+    >
       <div className="section-container">
         <AnimatedSection>
           <div className="spotlight-kicker">
@@ -61,24 +63,25 @@ export function PartnerSpotlight() {
             <div>
               <h2 className="spotlight-title">
                 Built for the
-                <span> The Bolt Vault.</span>
+                <span> Bolt Vault.</span>
               </h2>
             </div>
 
             <div className="spotlight-intro">
               <p>
-                A premium community experience focused on live interaction,
-                monthly competition, exclusive giveaways and rewards that give
-                back to the people who power the stream.
+                A premium community experience focused on live
+                interaction, monthly competition, exclusive giveaways
+                and rewards that give back to the people who power the
+                stream.
               </p>
 
               <a
-                href={siteConfig.discordUrl}
+                href="https://kick.com/boltonbarbie"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="spotlight-link"
               >
-                Join the community
+                Visit Bolt On Barbie
                 <ArrowUpRight size={18} aria-hidden="true" />
               </a>
             </div>
@@ -95,7 +98,9 @@ export function PartnerSpotlight() {
                 delay={index * 0.06}
                 className="spotlight-row"
               >
-                <span className="spotlight-number">{item.number}</span>
+                <span className="spotlight-number">
+                  {item.number}
+                </span>
 
                 <span className="spotlight-icon">
                   <Icon size={24} aria-hidden="true" />
@@ -106,7 +111,10 @@ export function PartnerSpotlight() {
                   <p>{item.description}</p>
                 </div>
 
-                <span className="spotlight-line" aria-hidden="true" />
+                <span
+                  className="spotlight-line"
+                  aria-hidden="true"
+                />
               </AnimatedSection>
             );
           })}
@@ -117,9 +125,8 @@ export function PartnerSpotlight() {
             <span className="spotlight-statement-label">
               The community promise
             </span>
-            <p>
-              Show up. Get involved. Be remembered.
-            </p>
+
+            <p>Show up. Get involved. Be remembered.</p>
           </div>
         </AnimatedSection>
       </div>
