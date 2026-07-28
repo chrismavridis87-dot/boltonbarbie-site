@@ -1,4 +1,4 @@
-﻿@import "tailwindcss";
+@import "tailwindcss";
 
 @theme {
   --color-neon-pink: #FF2DAA;
@@ -1688,7 +1688,7 @@ body::before {
 
 
 /* =========================================================
-   COMMUNITY SPOTLIGHT â€” TEXT LED PREMIUM SECTION
+   COMMUNITY SPOTLIGHT — TEXT LED PREMIUM SECTION
    ========================================================= */
 
 .spotlight-section {
@@ -2326,7 +2326,6 @@ main > section {
     animation: none !important;
   }
 }
-
 
 /* BOLT VAULT BOTRIX STORE START */
 
@@ -3020,5 +3019,3 @@ main > section {
 }
 
 /* BOLT VAULT BOTRIX STORE END */
-
-
