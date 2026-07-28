@@ -26,11 +26,12 @@ export const siteConfig = {
 export const navItems = [
   { label: "About", href: "#about" },
   { label: "Community", href: "#community" },
-  { label: "Spotlight", href: "#spotlight" },
+  { label: "Cooked", href: "#spotlight" },
   { label: "Rewards", href: "#rewards" },
   { label: "Schedule", href: "#schedule" },
   { label: "Socials", href: "#socials" },
   { label: "FAQ", href: "#faq" }
+  { label: "Store", href: "#store" },
 ];
 
 export const communityItems = [
