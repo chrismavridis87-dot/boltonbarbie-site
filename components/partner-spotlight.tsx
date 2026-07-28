@@ -31,20 +31,20 @@ const spotlightItems = [
       "Community-only giveaways, surprise drops and special event rewards throughout the month.",
     icon: Gift
   },
-  {
-    number: "05",
-    title: "Loyalty rewards",
-    description:
-      "Ongoing recognition and premium rewards for the viewers who consistently support the stream.",
-    icon: Crown
-  }
-    {
-    number: "06",
-    title: "Live RTP",
-    description:
-      "Track the hottest games RIGHT NOW.",
-    icon: Crown
-  }
+{
+  number: "05",
+  title: "Loyalty rewards",
+  description:
+    "Ongoing recognition and premium rewards for the viewers who consistently support the stream.",
+  icon: Crown
+},
+{
+  number: "06",
+  title: "Live RTP",
+  description:
+    "Live game information displayed throughout the stream.",
+  icon: Gauge
+}
 ];
 
 export function PartnerSpotlight() {
