@@ -56,14 +56,14 @@ export function PartnerSpotlight() {
         <AnimatedSection>
           <div className="spotlight-kicker">
             <span aria-hidden="true" />
-            Community spotlight
+            Cooked
           </div>
 
           <div className="spotlight-heading-grid">
             <div>
               <h2 className="spotlight-title">
-                Built for the
-                <span> Bolt Vault.</span>
+                Play on
+                <span> Cooked.</span>
               </h2>
             </div>
 
