@@ -6,21 +6,21 @@ const spotlightItems = [
     number: "01",
     title: "God-tier Rewards",
     description:
-      "A polished, high-energy stream built around interaction, special moments and community-led chaos.",
+      "The best rewards on any Casino.",
     icon: Sparkles
   },
   {
     number: "02",
     title: "Live challenges",
     description:
-      "Milestones, viewer choices and stream challenges that make every live session feel different.",
+      "Pick a challenge and complete it for big prizes, something for everyone!!!.",
     icon: Gauge
   },
   {
     number: "03",
     title: "Monthly MoneyGun leaderboard",
     description:
-      "A monthly community leaderboard that celebrates the most active and loyal members of the Barbie Army.",
+      "A monthly community leaderboard that celebrates the most active and loyal members under the Moneygun code.",
     icon: Trophy
   },
   {
@@ -34,14 +34,14 @@ const spotlightItems = [
   number: "05",
   title: "Loyalty rewards",
   description:
-    "Ongoing recognition and premium rewards for the viewers who consistently support the stream.",
+    "Ongoing recognition and premium rewards for the viewers who consistently support Moneygun.",
   icon: Crown
 },
 {
   number: "06",
   title: "Live RTP",
   description:
-    "Live game information displayed throughout the stream.",
+    "Live RTP, When you want it!.",
   icon: Gauge
 }
 ];
@@ -93,29 +93,30 @@ export function PartnerSpotlight() {
             const Icon = item.icon;
 
             return (
-              <AnimatedSection
-                key={item.title}
-                delay={index * 0.06}
-                className="spotlight-row"
-              >
-                <span className="spotlight-number">
-                  {item.number}
-                </span>
+<AnimatedSection
+  key={item.title}
+  delay={index * 0.06}
+>
+  <div className="spotlight-row">
+    <span className="spotlight-number">
+      {item.number}
+    </span>
 
-                <span className="spotlight-icon">
-                  <Icon size={24} aria-hidden="true" />
-                </span>
+    <span className="spotlight-icon">
+      <Icon size={24} aria-hidden="true" />
+    </span>
 
-                <div className="spotlight-copy">
-                  <h3>{item.title}</h3>
-                  <p>{item.description}</p>
-                </div>
+    <div className="spotlight-copy">
+      <h3>{item.title}</h3>
+      <p>{item.description}</p>
+    </div>
 
-                <span
-                  className="spotlight-line"
-                  aria-hidden="true"
-                />
-              </AnimatedSection>
+    <span
+      className="spotlight-line"
+      aria-hidden="true"
+    />
+  </div>
+</AnimatedSection>
             );
           })}
         </div>
